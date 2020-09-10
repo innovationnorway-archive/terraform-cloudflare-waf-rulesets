@@ -1,9 +1,9 @@
 terraform {
-  required_version = ">= 0.13"
+  required_version = ">= 0.13.2"
   required_providers {
-    random = {
-      source  = "hashicorp/random"
-      version = ">= 2.2.0"
+    cloudflare = {
+      source  = "cloudflare/cloudflare"
+      version = ">= 2.10.1"
     }
   }
 }
