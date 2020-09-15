@@ -1,3 +1,13 @@
+output "zone_name" {
+  value       = var.zone_name
+  description = "Echoes back the `zone_name` input variable value, for convenience if passing the result of this module elsewhere as an object."
+}
+
+output "zone_id" {
+  value       = data.cloudflare_zones.main.zones[0].id
+  description = "The zone ID."
+}
+
 output "rulesets" {
   value = tolist([
     for rs in var.rulesets : {
